@@ -1,5 +1,10 @@
 @import "tailwindcss";
-
+@layer components {
+  .hoverEffect {
+    @apply cursor-pointer rounded-full w-[52px] xl:w-auto 
+           hover:bg-gray-200 dark:hover:bg-gray-700;
+  }
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
