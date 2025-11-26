@@ -5,18 +5,21 @@ import Widgets from './components/Widgets'
 
 const Home = () => {
   return (
-    <div>
-      
-      <main className='flex min-h-screen max-w-7xl mx-auto bg-white'>
+    <div className="bg-white min-h-screen">
+      <main className='flex max-w-7xl mx-auto bg-white'>
+        {/* Compact Sidebar - Fixed width */}
+        <div className="w-[68px] xl:w-[250px]">
+          <SideBar />
+        </div>
 
-       
-        <SideBar />
-
-         <Feeds />
-          <Widgets />
-
+        {/* Main Feed - Takes remaining space */}
+        <div className="flex-1">
+          <Feeds />
+        </div>
+        
+        {/* Widgets / News Section - Hidden on mobile */}
+        <Widgets />
       </main>
-
     </div>
   )
 }
